@@ -1,0 +1,24 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "description": "Testes",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest . --detectOpenHandles",
+    "start": "node app.js",
+    "dev": "nodemon --legacy-watch app.js",
+    "docker:run": "docker run -i --rm -p 80:3000 --name express -v %cd%/db:/app/db express-app:1.0.0",
+    "docker:build": "docker build -t express-app:1.0.0 ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
+  }
+}

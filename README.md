@@ -11,6 +11,11 @@ As seguintes stacks estão sendo utilizadas:
 Utilizei as stacks tecnológicas acima para fazer alguns testes de containerização e orquestração de várias apps usando o docker e docker-compose e alguns testes usando o Nginx como proxy reverso.
 
 ### Anotações
+Acessar o bash de uma imagem
+```sh
+docker run --rm -it --entrypoint /bin/sh express-app_backend
+```
+
 Copiar configs e dar restart no Nginx
 ```sh
 docker cp .\nginx.conf express-app-reverse-proxy-1:/etc/nginx/conf.d/
